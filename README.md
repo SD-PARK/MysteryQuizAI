@@ -14,4 +14,4 @@ OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**�
 
 ## 👀 프로젝트 정보
 ### 개발 스택
-<img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/NODEJS-339933.svg?&style=for-the-badge&logo=Node.js&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
+<img src ="https://img.shields.io/badge/NODEJS-339933.svg?&style=for-the-badge&logo=Node.js&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
