@@ -1,0 +1,59 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+body { font-family: 'Gowun Batang', serif; color: #D0D0D0;}
+
+body { background-color: #1A1A1D; }
+#chat-container {
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+}
+#chat-messages {
+    min-height: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    white-space: pre-line;
+}
+#chat-messages::-webkit-scrollbar { width: 4px; }
+#chat-messages::-webkit-scrollbar-thumb { background: #555; border-radius: 15px; }
+#this {
+    height:auto;
+}
+#chat-input {
+    max-width: 950px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #555;
+}
+#input-text {
+    height: auto;
+    overflow-y: hidden;
+    resize: none;
+    background-color: #1A1A1D;
+    color: #fff;
+    outline-color: #FE6B8B;
+    border: none;
+}
+#send-button {
+    width: 45px; height: 45px;
+    position: absolute; right: 24px; bottom: 23px;
+    padding: 6px;
+    border: none; border-radius: 5px; outline: none;
+    background: none;
+    transition: background-color 0.2s;
+    line-height:17px;
+}
+#send-button.active {
+    background-color: #580459;
+}
+#send-button > i {
+    font-size:17px;
+    color: #555;
+    transition: color 0.2s;
+}
+#send-button:enabled > i {
+    color: #eee;
+}

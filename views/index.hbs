@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MysteryQuizAI</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="chat-container" class="container">
+    <h1 class="font-weight-bold">Mystery Quiz</h1>
+    <div id="chat-messages" class="p-lg-3">퀴즈를 만드는 중이에요...
+      <!-- Set Quiz -->
+    </div>
+
+    <div id="chat-logs">
+      <!-- Ask Question Logs -->
+    </div>
+    
+    <div id="chat-input" class="fixed-bottom p-3 w-100">
+      <textarea id="input-text" class="form-control pr-5" tabindex="0" placeholder="대화 입력" oninput="autoResize(this)"></textarea>
+      <button id="send-button" disabled>
+        <i class="fa-regular fa-envelope"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ajax.js"></script>
+</body>
+</html>
