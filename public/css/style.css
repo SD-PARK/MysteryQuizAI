@@ -18,15 +18,19 @@ body { background-color: #1A1A1D; }
     min-height: 250px;
     max-height: 400px;
     overflow-y: auto;
-    margin-bottom: 20px;
     border: 1px solid #555;
     white-space: pre-line;
 }
 #chat-messages::-webkit-scrollbar { width: 4px; }
 #chat-messages::-webkit-scrollbar-thumb { background: #555; border-radius: 15px; }
-.notice {
-    margin: 0 auto;
+.notice { text-align: center; }
+#progress-step {
+    appearance: none;
+    width: 960px; height: 7px; 
+    margin-bottom: 20px;
 }
+#progress-step::-webkit-progress-bar { background:#1F1F22; border-radius:10px; }
+#progress-step::-webkit-progress-value { background:#580459; border-radius:10px; }
 
 /* chat-logs */
 #chat-logs {
@@ -82,7 +86,7 @@ body { background-color: #1A1A1D; }
 
 /* Loading */
 .loader {
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
     height: 60px;
     width: 60px;
     border: 2px solid #eee;

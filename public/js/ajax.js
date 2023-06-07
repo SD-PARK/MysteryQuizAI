@@ -13,6 +13,7 @@ function pushMessages(role, content) {
     });
 }
 
+const manual = `<br><br>당신은 정해진 시간 내에 사건에 대한 단서를 수집하고, 결론을 도출해내어야 합니다.<br>주어진 명령어와 기지를 발휘해 최소한의 질문으로 게임을 클리어해보세요!`;
 /** 새로운 게임을 요청합니다. */
 function newGame() {
     sendPossible = false;
@@ -23,21 +24,17 @@ function newGame() {
         url: '/openai',
         contentType: 'application/json',
         success: function(response) {
-            chatMessages.html(response);
+            chatMessages.html(response.content + manual);
             sendPossible = true;
             checkSendPossible();
-            pushMessages('assistant', response);
+            pushMessages('assistant', response.content);
+            initProgressBar(response.token_count);
         },
-        error: function(xhr, status, error) {
-            chatMessages.html('문제를 불러올 수 없어요.\n새로고침 해주세요.');
-            sendPossible = true;
-            checkSendPossible();
-            console.error('Error:', error);
-        }
+        error: ajaxErrorHandler
     });
 }
 
-/** 현재 게임에 대한 조사를 진행합니다. */
+/** 현재 게임에 대해 이어서 조사를 진행합니다. */
 function inquiry() {
     const message = $('#input-text').val();
     sendPossible = false;
@@ -56,14 +53,23 @@ function inquiry() {
             sendPossible = true;
             checkSendPossible();
             pushMessages('user', message);
-            pushMessages('assistant', response);
-            replaceLoadingLog(true, response);
+            pushMessages('assistant', response.content);
+            replaceLoadingLog(200, response.content);
+            updateProgressBar(response.token_count);
         },
-        error: function(xhr, status, error) {
-            sendPossible = true;
-            checkSendPossible();
-            replaceLoadingLog(false);
-            console.error('Error:', error);
-        }
+        error: ajaxErrorHandler
     });
+}
+
+/**
+ * AJAX 요청 실패를 처리하는 함수입니다.
+ * @param {*} xhr 
+ * @param {*} status 
+ * @param {*} error 
+ */
+function ajaxErrorHandler(xhr, status, error) {
+    sendPossible = true;
+    checkSendPossible();
+    replaceLoadingLog(status);
+    console.error('Error:', error);
 }
