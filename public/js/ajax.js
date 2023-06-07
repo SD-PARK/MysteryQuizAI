@@ -49,21 +49,20 @@ $(document).ready(function() {
      * 현재 게임에 대한 조사를 진행합니다.
      */
     function inquiry() {
-        const data = { message: inputText.val() };
+        const message = inputText.val();
         sendPossible = false;
         inputText.val('');
         buttonDisabled();
-
         $.ajax({
             type: 'POST',
-            url: '/openai',
-            data: [...messages, {role: 'user', content: data}],
+            url: '/openai/inquiry',
+            data: JSON.stringify({ messages: [...messages, {role: 'user', content: message}] }),
             contentType: 'application/json',
             success: function(response) {
                 chatMessages.html(response);
                 sendPossible = true;
                 checkSendPossible();
-                pushMessages('user', data);
+                pushMessages('user', message);
                 pushMessages('assistant', response);
             },
             error: function(xhr, status, error) {
