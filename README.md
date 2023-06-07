@@ -1,7 +1,7 @@
 # MysteryQuizAI
 OpenAI API 기반의 대화형 추리 퀴즈 사이트
 
-<img alt="정답은 3. 리사" src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/2d731eed-c532-4d78-828d-9841e124a59a" width="1000"/>
+<img src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/a0905b14-be4e-4bab-a38a-b3aba26d31e6" width="1000"/>
 
 ## 🎉 프로젝트 소개
 OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**입니다.
