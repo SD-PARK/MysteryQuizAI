@@ -17,7 +17,6 @@ export class OpenaiController {
 
     @Post('inquiry')
     async inquiry(@Body() messagesData: MessagesDto): Promise<string> {
-        console.log(messagesData);
         return await this.openaiService.inquiry(messagesData);
     }
 }
