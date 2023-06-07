@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { OpenaiService } from './openai.service';
-import { MessageDto } from './dto/message.dto';
+import { MessagesDto } from './dto/message.dto';
 
 /**
  * OpenAI API와 관련된 기능을 제공합니다.
@@ -16,8 +16,8 @@ export class OpenaiController {
     }
 
     @Post('inquiry')
-    async inquiry(@Body() messagesData: MessageDto[]): Promise<string> {
+    async inquiry(@Body() messagesData: MessagesDto): Promise<string> {
         console.log(messagesData);
-        return 'good';
+        return await this.openaiService.inquiry(messagesData);
     }
 }
