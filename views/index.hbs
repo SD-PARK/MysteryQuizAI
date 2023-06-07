@@ -9,8 +9,10 @@
 <body>
   <div id="chat-container" class="container">
     <h1 class="font-weight-bold">Mystery Quiz</h1>
-    <div id="chat-messages" class="p-lg-3">퀴즈를 만드는 중이에요...
+    <div id="chat-messages" class="p-lg-3">
       <!-- Set Quiz -->
+      <div class="loader"></div>
+      <div class="notice">퀴즈를 생성 중 입니다. 최대 1분 가량 소요됩니다.</div>
     </div>
 
     <div id="chat-logs">
@@ -28,5 +30,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/action.js"></script>
   <script src="js/ajax.js"></script>
+  <script src="js/logs.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -2,13 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 body { font-family: 'Gowun Batang', serif; color: #D0D0D0;}
 
+/* container */
 body { background-color: #1A1A1D; }
 #chat-container {
     max-width: 1000px;
     height: 100vh;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
+
+/* chat-messages */
 #chat-messages {
     min-height: 250px;
     max-height: 400px;
@@ -19,9 +24,27 @@ body { background-color: #1A1A1D; }
 }
 #chat-messages::-webkit-scrollbar { width: 4px; }
 #chat-messages::-webkit-scrollbar-thumb { background: #555; border-radius: 15px; }
-#this {
-    height:auto;
+.notice {
+    margin: 0 auto;
 }
+
+/* chat-logs */
+#chat-logs {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 100px;
+}
+#chat-logs::-webkit-scrollbar { width: 4px; }
+#chat-logs::-webkit-scrollbar-thumb { background: #555; border-radius: 15px; }
+.log {
+    padding:10px;
+    border-bottom: 1px solid #555;
+}
+.me {
+    background-color:#1F1F22;
+}
+
+/* chat-input */
 #chat-input {
     max-width: 950px;
     left: 50%;
@@ -34,7 +57,6 @@ body { background-color: #1A1A1D; }
     resize: none;
     background-color: #1A1A1D;
     color: #fff;
-    outline-color: #FE6B8B;
     border: none;
 }
 #send-button {
@@ -56,4 +78,26 @@ body { background-color: #1A1A1D; }
 }
 #send-button:enabled > i {
     color: #eee;
+}
+
+/* Loading */
+.loader {
+    margin: 40px auto 0 auto;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #eee;
+    border-top-color: #580459;
+    border-right-color: #580459;
+    border-radius: 100%;
+    animation: spin 1400ms infinite linear;
+}
+.small {
+    margin: 1% 0;
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(359deg); }
 }
