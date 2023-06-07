@@ -1,7 +1,7 @@
 # MysteryQuizAI
 OpenAI API 기반의 대화형 추리 퀴즈 사이트
 
-<!-- <img alt="정답은 3. 리사" src="https://github.com/SD-PARK/mystery_quiz_ai/assets/97375357/0f45305c-e654-4fb5-9892-e49ddeeac141" width="1000"/> -->
+<img src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/a0905b14-be4e-4bab-a38a-b3aba26d31e6" width="1000"/>
 
 ## 🎉 프로젝트 소개
 OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**입니다.
@@ -14,4 +14,4 @@ OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**�
 
 ## 👀 프로젝트 정보
 ### 개발 스택
-<img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/TYPESCRIPT-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
+<img src ="https://img.shields.io/badge/TYPESCRIPT-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/> <img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
