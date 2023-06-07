@@ -1,6 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { OpenAIApi, Configuration } from 'openai';
 import { MessageDto, MessagesDto } from './dto/Messages.dto';
+import { TextWithTokenCountDto } from './dto/TextWithTokenCount.dto';
 
 @Injectable()
 export class OpenaiService {
@@ -12,19 +13,18 @@ export class OpenaiService {
 
     /**
      * 새로운 게임을 생성합니다.
-     * @returns {Promise<string>} 생성된 게임 설명문
+     * @returns {Promise<TextWithTokenCountDto>} 생성된 게임 설명문
      */
-    async generateNewGame(): Promise<string> {
+    async generateNewGame(): Promise<TextWithTokenCountDto> {
         return await this.createChatCompletion(this.scenario);
     }
 
     /**
      * 게임 내에서의 조사를 실시하고, 결과를 반환합니다.
-     * @return {Promise<string>} 조사 결과
+     * @return {Promise<TextWithTokenCountDto>} 조사 결과
      */
-    async inquiry(messagesData: MessagesDto): Promise<string> {
+    async inquiry(messagesData: MessagesDto): Promise<TextWithTokenCountDto> {
         const messages: MessageDto[] = [...this.scenario, ...messagesData.messages];
-
         return await this.createChatCompletion(messages);
     }
 
@@ -34,15 +34,15 @@ export class OpenaiService {
      * @returns {Promise<string>} 생성된 대화문입니다.
      * @throws 대화 생성에 실패한 경우 'Failed to generate new game.' 예외가 발생합니다.
      */
-    async createChatCompletion(messages: MessageDto[]): Promise<string> {
+    async createChatCompletion(messages: MessageDto[]): Promise<TextWithTokenCountDto> {
         try {
             const response = await this.openai.createChatCompletion({
                 model: 'gpt-3.5-turbo',
                 messages: messages,
             });
-            console.log(response.data.usage.total_tokens);
             const content: string = response.data.choices[0].message.content;
-            return content;
+            const tokenCount: number = response.data.usage.total_tokens;
+            return { content: content, token_count: tokenCount };
         } catch (err) {
             this.logger.error('Error occurred:', err);
             throw new Error('Failed to generate new game.');
