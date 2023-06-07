@@ -13,7 +13,7 @@ function pushMessages(role, content) {
     });
 }
 
-const manual = `<br><br>당신은 정해진 시간 내에 사건에 대한 단서를 수집하고, 결론을 도출해내어야 합니다.<br>주어진 명령어와 기지를 발휘해 최소한의 질문으로 게임을 클리어해보세요!`;
+const manual = `당신은 정해진 시간 내에 사건에 대한 단서를 수집하고, 결론을 도출해내어야 합니다.<br>주어진 명령어와 기지를 발휘해 최소한의 질문으로 게임을 클리어해보세요!<br><br>게임 명령어:<br>1. TALKTO [용의자] - 용의자와 대화합니다.<br>2. INV - 범죄 현장을 조사합니다.<br>3. EVIDENCE - 획득한 증거 목록을 나열합니다.<br>4. NEWGAME - 새로운 게임을 시작합니다.<br><br>`;
 /** 새로운 게임을 요청합니다. */
 function newGame() {
     sendPossible = false;
@@ -24,7 +24,7 @@ function newGame() {
         url: '/openai',
         contentType: 'application/json',
         success: function(response) {
-            chatMessages.html(response.content + manual);
+            chatMessages.html(manual + response.content);
             sendPossible = true;
             checkSendPossible();
             pushMessages('assistant', response.content);
