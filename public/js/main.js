@@ -14,6 +14,7 @@ function checkMessage() {
         addLog(true, message);
         addLog(false);
         replaceLoadingLog(200, `새로운 게임을 시작합니다.`);
+        sendPossible = false;
         setTimeout(() => {
             newGame();
         }, 3000)
