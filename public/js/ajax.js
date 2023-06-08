@@ -33,7 +33,10 @@ function newGame() {
             pushMessages('assistant', response.content);
             initProgressBar(response.token_count);
         },
-        error: ajaxErrorHandler
+        error: function(xhr, status, error) {
+            chatMessages.html(`<div class="notice" style="margin-top:85px">사건을 불러오는 데 실패했습니다.<br>새로고침 해주세요.</div>`)
+            console.error('Error:', error);
+        }
     });
 }
 
