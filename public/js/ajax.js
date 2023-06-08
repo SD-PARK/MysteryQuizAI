@@ -17,7 +17,9 @@ const manual = `당신은 정해진 시간 내에 사건에 대한 단서를 수
 /** 새로운 게임을 요청합니다. */
 function newGame() {
     sendPossible = false;
-    buttonDisabled();
+    emptyTextarea();
+    chatLogs.empty();
+    chatMessages.html(`<div class="loader"></div><div class="notice">퀴즈를 생성 중 입니다. 최대 1분 가량 소요됩니다.</div>`);
 
     $.ajax({
         type: 'GET',
@@ -38,9 +40,8 @@ function newGame() {
 function inquiry() {
     const message = $('#input-text').val();
     sendPossible = false;
-    $('#input-text').val('');
-    buttonDisabled();
-    
+    emptyTextarea();
+
     addLog(true, message);
     addLog(false);
 
@@ -70,6 +71,6 @@ function inquiry() {
 function ajaxErrorHandler(xhr, status, error) {
     sendPossible = true;
     checkSendPossible();
-    replaceLoadingLog(status);
+    replaceLoadingLog(xhr.status);
     console.error('Error:', error);
 }
