@@ -13,11 +13,11 @@ let sendPossible = true;
 let initialTokenValue = 0;
 
 /** 메시지 전송 시: Enter or Send Button Click */
-$('#send-button').click(function() { inquiry(); });
-$('#input-text').keydown(function(event) {
-    if (event.keyCode === 13 && !event.shiftKey && sendPossible) {
+$('#send-button').click(() => { if(checkMessage()) { inquiry(); } });
+$('#input-text').keydown((e) => {
+    if (e.keyCode === 13 && !e.shiftKey && sendPossible && checkMessage()) {
         inquiry();
-        event.preventDefault();
+        e.preventDefault();
     }
 });
 
@@ -65,4 +65,12 @@ function initProgressBar(tokens) {
  */
 function updateProgressBar(tokens) {
     progress.value = tokens - initialTokenValue;
+}
+
+/**
+ * Textarea 안의 Text를 지우고, 버튼을 비활성화합니다.
+ */
+function emptyTextarea() {
+    $('#input-text').val('');
+    buttonDisabled();
 }
