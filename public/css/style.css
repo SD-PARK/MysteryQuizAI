@@ -86,7 +86,7 @@ body { background-color: #1A1A1D; }
 
 /* Loading */
 .loader {
-    margin: 20px auto 0 auto;
+    margin: 65px auto 25px auto;
     height: 60px;
     width: 60px;
     border: 2px solid #eee;
