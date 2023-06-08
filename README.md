@@ -1,7 +1,10 @@
 # MysteryQuizAI
 OpenAI API 기반의 대화형 추리 퀴즈 사이트
 
-<img src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/c4470c0f-3817-4c24-8075-2f0a57ba3aa0" width="1000"/>
+<img src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/0fc96af3-fae0-44bf-98a8-b564ce995b17" width="1000"/>
+
+### Test Link
+http://ec2-13-209-21-60.ap-northeast-2.compute.amazonaws.com:3001/
 
 ## 🎉 프로젝트 소개
 OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**입니다.
