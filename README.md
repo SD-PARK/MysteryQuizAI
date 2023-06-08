@@ -128,8 +128,8 @@ class MessageDto {
 ---
 
 ## ✨ 주요 코드
-<details><summary><h4>src/openai/openai.service.ts</h4></summary>
-<div markdown="1">
+
+#### src/openai/openai.service.ts
 
 ```typescript
 /**
@@ -159,7 +159,6 @@ async generateChat(messages: MessageDto[]): Promise<TextWithTokenCountDto> {
     }
 }
 ```
-</div></details>
 
 OpenAI API에 접근해 대화를 생성하는 함수입니다.
 
