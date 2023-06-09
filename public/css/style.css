@@ -26,7 +26,7 @@ body { background-color: #1A1A1D; }
 .notice { text-align: center; }
 #progress-step {
     appearance: none;
-    width: 960px; height: 7px; 
+    width: 100%; height: 7px; 
     margin-bottom: 20px;
 }
 #progress-step::-webkit-progress-bar { background:#1F1F22; border-radius:10px; }
