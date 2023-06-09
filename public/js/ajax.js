@@ -1,5 +1,5 @@
 const chatMessages = $('#chat-messages');
-const messages = [];
+let messages = [];
 
 /**
  * messages 배열에 메세지 객체를 추가합니다.
@@ -20,6 +20,7 @@ function newGame() {
     sendPossible = false;
     emptyTextarea();
     chatLogs.empty();
+    messages = [];
     chatMessages.html(`<div class="loader"></div><div class="notice">퀴즈를 생성 중 입니다. 최대 1분 가량 소요됩니다.</div>`);
 
     $.ajax({
