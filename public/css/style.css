@@ -1,6 +1,7 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 body { font-family: 'Gowun Batang', serif; color: #D0D0D0;}
+.bold { font-weight: bold; }
 
 /* container */
 body { background-color: #1A1A1D; }
@@ -104,4 +105,16 @@ body { background-color: #1A1A1D; }
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(359deg); }
+}
+
+/* Modal */
+#modal {
+    position: absolute;
+    top:50%; left:50%; transform: translate(-50%, -50%);
+    max-width: 500px;
+    padding: 16px 25px;
+    background-color:#1F1F22;
+    border: 4px double #555; border-radius: 15px;
+    text-align: center;
+    opacity: 0;
 }
