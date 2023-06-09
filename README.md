@@ -3,9 +3,6 @@ OpenAI API 기반의 대화형 추리 퀴즈 사이트
 
 <img src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/0fc96af3-fae0-44bf-98a8-b564ce995b17" width="1000"/>
 
-### Test Link
-http://ec2-13-209-21-60.ap-northeast-2.compute.amazonaws.com:3001/
-
 ## 🎉 프로젝트 소개
 OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**입니다.
 
@@ -18,6 +15,9 @@ OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**�
 ## 👀 프로젝트 정보
 ### 개발 스택
 <img src ="https://img.shields.io/badge/TYPESCRIPT-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/> <img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
+
+### 테스트 링크
+http://mystery-quiz-ai.site/
 
 ## 💬 실행 방법
 
