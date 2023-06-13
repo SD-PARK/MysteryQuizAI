@@ -118,8 +118,8 @@ OpenAI API를 통해 다중 턴 대화를 진행합니다.
 #### 요청
 ```typescript
 class MessageDto {
-    readonly role: "system" | "user" | "assistant";
-    readonly content: string;
+    role: "system" | "user" | "assistant";
+    content: string;
 }
 ```
 
