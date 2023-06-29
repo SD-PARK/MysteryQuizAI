@@ -1,7 +1,7 @@
 # MysteryQuizAI
-OpenAI API 기반의 대화형 추리 퀴즈 사이트
-
 <img src="https://github.com/SD-PARK/MysteryQuizAI/assets/97375357/0fc96af3-fae0-44bf-98a8-b564ce995b17" width="1000"/>
+
+OpenAI API 기반의 대화형 추리 퀴즈 사이트
 
 ## 🎉 프로젝트 소개
 OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**입니다.
@@ -13,11 +13,11 @@ OpenAI API를 기반으로 한 **실시간 대화형 추리 퀴즈 플랫폼**�
 **대화 형식으로 대응**할 수 있기 때문에 퀴즈의 답을 찾아내는 과정에서 더욱 흥미로운 경험을 제공할 수 있습니다.
 
 ## 👀 프로젝트 정보
-### 개발 스택
-<img src ="https://img.shields.io/badge/TYPESCRIPT-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/> <img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
-
 ### 테스트 링크
 http://mystery-quiz-ai.site/
+
+### 개발 스택
+<img src ="https://img.shields.io/badge/TYPESCRIPT-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/> <img src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/> <img src ="https://img.shields.io/badge/EXPRESS-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/> <img src ="https://img.shields.io/badge/OPENAI-412991.svg?&style=for-the-badge&logo=OpenAI&logoColor=white"/>
 
 ## 💬 실행 방법
 
@@ -118,8 +118,8 @@ OpenAI API를 통해 다중 턴 대화를 진행합니다.
 #### 요청
 ```typescript
 class MessageDto {
-    readonly role: "system" | "user" | "assistant";
-    readonly content: string;
+    role: "system" | "user" | "assistant";
+    content: string;
 }
 ```
 
