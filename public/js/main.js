@@ -25,6 +25,8 @@ function checkMessage() {
         addLog(false);
         replaceLoadingLog(200, `게임이 종료되었습니다.<br>'NEWGAME' 명령어를 입력해 새로운 게임을 시작하세요.`);
         return false;
+    } else if (message.trim() === '') {
+        return false;
     }
     return true;
 }
