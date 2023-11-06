@@ -9,7 +9,7 @@ export class OpenaiService {
     constructor(private configService: ConfigService) {}
     private config: Configuration = new Configuration({ apiKey: this.configService.get<string>('OPENAI_API_KEY') });
     private openai: OpenAIApi = new OpenAIApi(this.config);
-    private readonly scenario: MessageDto[] = [{role: 'system', content: `'CALL' 명령어를 사용하면, "[이름]이 당신의 말을 기다립니다"라고 말해주세요. 'INV' 명령어를 사용하면, 범죄 현장을 조사할 수 있습니다. 당신은 범죄 현장을 피해자의 신체와 범죄 현장 주변의 있을 법한 구성요소로 분리합니다. 질문을 통해 각 구성요소를 살펴보다 범죄에 대한 단서를 발견하면, 증거 목록을 저장해 유지하세요. 'EVIDENCE' 명령어를 사용하면, 조사를 통해 알게된 모든 단서를 나열하세요.`},
+    private readonly scenario: MessageDto[] = [{role: 'system', content: `'CALL' 명령어를 사용하면, 심문을 위해 용의자를 불러옵니다. 'INV' 명령어를 사용하면, 범죄 현장을 조사할 수 있습니다. 당신은 범죄 현장을 피해자의 신체와 범죄 현장 주변의 있을 법한 구성요소로 분리합니다. 질문을 통해 각 구성요소를 살펴보다 범죄에 대한 단서를 발견하면, 증거 목록을 저장해 유지하세요. 'EVIDENCE' 명령어를 사용하면, 조사를 통해 알게된 모든 단서를 나열하세요.`},
                                                {role: 'user',   content: `제가 조사하게 될, 범인이 잡히지 않은 무작위 범죄 사건을 만드세요. 사건의 개요를 설명하고, 5명 이하의 한글 이름의 용의자를 만들어 나열하고, 정답에 대한 단서를 나열한 뒤, 저의 질문을 기다리세요. 제 질문에 용의자가 되어 대화하세요.`}];
     private logger: Logger = new Logger(OpenaiService.name);
 
